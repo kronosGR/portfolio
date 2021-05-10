@@ -1,0 +1,228 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap");
+@import url("keyframes.css");
+
+:root {
+  font-size: 16px;
+
+  --yellow: #f8c000;
+  --gray: #f5f5f5;
+  --blackish: #202020;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*,
+after {
+  box-sizing: inherit;
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--yellow);
+}
+
+header {
+  position: fixed;
+  width: inherit;
+  background-color: var(--blackish);
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+}
+
+header > div {
+  display: flex;
+  width: 70%;
+  padding: 10px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+header label img {
+  height: 30px;
+}
+
+#menu {
+  display: none;
+}
+
+#menu:checked ~ nav {
+  right: -46%;
+  top: -210%;
+}
+
+nav {
+  display: block;
+  position: absolute;
+  right: -150%;
+  top: -500%;
+  z-index: -1;
+  background-color: var(--blackish);
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  transition: 1s;
+  transition: 1s;
+  margin: 0 auto;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#page2 {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.next {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+}
+
+q {
+  quotes: "«" "»";
+  position: relative;
+  font-size: 2rem;
+  animation: slidein-right 1s;
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
+
+.circle {
+  position: absolute;
+  left: 2%;
+  background-color: var(--yellow);
+  z-index: -1;
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+  padding-top: 40%;
+  animation: circle-max 1s;
+}
+
+.developer {
+  width: 50%;
+}
+
+.profiles {
+  width: 15%;
+}
+
+#page2 h2 {
+  margin: 0 30px;
+}
+
+.circle2 {
+  left: 22%;
+  top: 142%;
+  width: 55%;
+  padding-top: 55%;
+}
+
+.next2 {
+  position: absolute;
+  bottom: -98%;
+  left: 43%;
+}
+
+.slide {
+  position: relative;
+}
+
+.slide > img {
+  width: 50%;
+  margin: 10px;
+}
+
+.hidden {
+  position: absolute;
+  display: block;
+  top: 10px;
+  left: 25%;
+  background-color: white;
+  width: 50%;
+  height: 20%;
+  font-size: 0.7rem;
+  border: 1px var(--yellow) solid;
+  padding: 10px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.hidden img {
+  width: 20px;
+}
+
+.hidden h3,
+.hidden p {
+  margin-bottom: 10px;
+}
+
+.hidden:hover, .hidden:active{
+  height: 90%;
+  transition: 1s;
+}
+
+.cta{
+  display: block;
+  background-color: var(--blackish);
+  color: var(--yellow);
+  padding: 5px;
+  font-family: "Playfair Display", serif;
+
+}
+
+.next3 {
+  position: absolute;
+  bottom: -198%;
+  left: 43%;
+}
+
+

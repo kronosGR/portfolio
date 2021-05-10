@@ -1,0 +1,17 @@
+@keyframes slidein-right {
+  from {
+    left: 100%
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes circle-max {
+  from {
+    width: 0%;
+    padding-top: 0%;
+  }
+  
+}
