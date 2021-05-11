@@ -101,6 +101,13 @@ nav {
   margin: 0 auto;
 }
 
+nav ul{
+  position: absolute;
+  top: 51%;
+  left: 19%;
+  font-size: 1.5rem;
+}
+
 .page {
   height: 100vh;
   display: flex;
@@ -225,4 +232,61 @@ q::after {
   left: 43%;
 }
 
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page4 h2{
+  margin-bottom: 20px;
+}
+
+form input, textarea{
+  display: block;
+  margin: 5px;
+  width: 100%;
+  border: 2px var(--blackish) solid;
+}
+
+form button{
+  margin: 10px 0;
+  border: 2px var(--blackish) solid;
+  width: 30%;
+}
+
+#page4 img{
+  width: 30px;  
+}
+
+#page4{
+  height: 85vh;
+}
+
+.circle4 {
+  left: 10%;
+  top: 319%;
+  width: 80%;
+  padding-top: 80%;
+}
+
+footer{
+  background-color: gray;
+  color: white;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.top{
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}
+
+.top img{
+  width: 50px;
+}
 
