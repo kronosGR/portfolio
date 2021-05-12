@@ -17,6 +17,7 @@ body {
   box-sizing: border-box;
   width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -82,8 +83,8 @@ header label img {
 }
 
 #menu:checked ~ nav {
-  right: -46%;
-  top: -210%;
+  right: -23vh;
+  top: -20vh;
 }
 
 nav {
@@ -94,17 +95,17 @@ nav {
   z-index: -1;
   background-color: var(--blackish);
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 50vh;
+  height: 50vh;
   transition: 1s;
   transition: 1s;
   margin: 0 auto;
 }
 
-nav ul{
+nav ul {
   position: absolute;
-  top: 51%;
-  left: 19%;
+  top: 29vh;
+  left: 12vh;
   font-size: 1.5rem;
 }
 
@@ -124,7 +125,7 @@ nav ul{
 .next {
   position: absolute;
   bottom: 0;
-  left: 45%;
+  left: calc(100% / 2 - 50px / 2);
 }
 
 q {
@@ -144,18 +145,18 @@ q::after {
 
 .circle {
   position: absolute;
-  left: 2%;
+  left: 2vw;
   background-color: var(--yellow);
   z-index: -1;
-  width: 40%;
+  width: 25vh;
   height: auto;
   border-radius: 50%;
-  padding-top: 40%;
+  padding-top: 25vh;
   animation: circle-max 1s;
 }
 
 .developer {
-  width: 50%;
+  width: 28vh;
 }
 
 .profiles {
@@ -167,16 +168,15 @@ q::after {
 }
 
 .circle2 {
-  left: 22%;
-  top: 142%;
-  width: 55%;
-  padding-top: 55%;
+  left: 0;
+  margin: 0 calc(100% / 2 - 30vh / 2);
+  top: 143vh;
+  width: 30vh;
+  padding-top: 30vh;
 }
 
 .next2 {
-  position: absolute;
-  bottom: -98%;
-  left: 43%;
+  bottom: -100%;
 }
 
 .slide {
@@ -197,7 +197,6 @@ q::after {
   width: 50%;
   height: 20%;
   font-size: 0.7rem;
-  border: 1px var(--yellow) solid;
   padding: 10px;
   overflow: hidden;
   transition: 1s;
@@ -212,27 +211,26 @@ q::after {
   margin-bottom: 10px;
 }
 
-.hidden:hover, .hidden:active{
+.hidden:hover,
+.hidden:active {
   height: 90%;
   transition: 1s;
+  cursor: pointer;
 }
 
-.cta{
+.cta {
   display: block;
   background-color: var(--blackish);
   color: var(--yellow);
   padding: 5px;
   font-family: "Playfair Display", serif;
-
 }
 
 .next3 {
-  position: absolute;
-  bottom: -198%;
-  left: 43%;
+  bottom: -200%;
 }
 
-form{
+form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -240,39 +238,43 @@ form{
   align-items: center;
 }
 
-#page4 h2{
+#page4 h2 {
   margin-bottom: 20px;
 }
 
-form input, textarea{
+form input,
+textarea {
   display: block;
   margin: 5px;
   width: 100%;
   border: 2px var(--blackish) solid;
 }
 
-form button{
+form button {
   margin: 10px 0;
   border: 2px var(--blackish) solid;
   width: 30%;
 }
 
-#page4 img{
-  width: 30px;  
+#page4 img {
+  width: 30px;
 }
 
-#page4{
+#page4 {
   height: 85vh;
 }
 
 .circle4 {
-  left: 10%;
+  left: 0%;
   top: 319%;
-  width: 80%;
-  padding-top: 80%;
+  width: 42vh;
+  padding-top: 42vh;
+  display: flex;
+  align-items: center;
+  margin: 0 calc(100% / 2 - 40vh / 2);
 }
 
-footer{
+footer {
   background-color: gray;
   color: white;
   font-family: "Playfair Display", serif;
@@ -280,13 +282,148 @@ footer{
   padding: 20px;
 }
 
-.top{
+.top {
   position: fixed;
   bottom: 20px;
   right: 10px;
 }
 
-.top img{
+.top img {
   width: 50px;
 }
 
+@media screen and (min-width: 800px) {
+  :root {
+    font-size: 17px;
+  }
+
+  .next:hover{
+    background-color: var(--yellow);
+    border-radius: 50%;
+  }
+
+  .next img{
+    margin: 0px 0px -3px 0px;
+  }
+
+  .top:hover{
+    transform: scale(0.8);
+  }
+
+  header label {
+    display: none;
+  }
+
+  .circle {
+    width: 40vh;
+    padding-top: 40vh;
+    margin: 0 calc(100% / 2 - 100vh / 2);
+  }
+
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    color: white;
+    z-index: 2;
+  }
+
+  nav ul {
+    display: flex;
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  nav li {
+    margin: 7px;
+  }
+
+  .projects-container {
+    display: flex;
+    margin: 15vh 0;
+  }
+
+  .slide > img {
+    width: 80%;
+  }
+
+  .circle2 {
+    top: 133vh;
+    margin: 0 calc(100% / 2 - 40vh / 2);
+  }
+
+  .developer {
+    width: 40vh;
+  }
+
+  .circle4 {
+    width: 50vh;
+    padding-top: 50vh;
+    margin: 0 calc(100% / 2 - 48vh / 2);
+  }
+
+  .hidden h3 {
+    font-size: 1.2rem;
+  }
+
+  .hidden p {
+    font-size: 0.9rem;
+  }
+
+  .hidden {
+    height: 16%;
+  }
+
+  #page4 h2{
+    font-size: 1.7rem;
+    margin-top: 20px;
+  }
+
+  #page4 form {
+    padding-top: 15px;
+  } 
+
+  #page4 input,
+  #page4 textarea,
+  #page4 button {
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  textarea{
+    height: 15vh;
+  }
+
+  .hidden:hover{
+    height: 91%;
+    transition: 1s;
+    border: 3px var(--yellow) solid;
+  }
+
+  .slide:hover ~ .hidden{
+    border: 3px var(--yellow) solid;
+    height: 91%;
+  }
+
+
+  .hidden img {
+    width: 30px;
+  }
+
+  .cta{
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  .cta:hover{
+    background-color: white;
+    border: 1px var(--blackish) solid;
+    color: var(--blackish);
+  }
+}
