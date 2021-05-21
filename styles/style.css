@@ -123,7 +123,8 @@ nav ul {
 }
 
 .next {
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   bottom: 0;
   left: calc(100% / 2 - 50px / 2);
 }
@@ -175,10 +176,6 @@ q::after {
   padding-top: 30vh;
 }
 
-.next2 {
-  bottom: -100%;
-}
-
 .slide {
   position: relative;
 }
@@ -226,10 +223,6 @@ q::after {
   font-family: "Playfair Display", serif;
 }
 
-.next3 {
-  bottom: -200%;
-}
-
 form {
   width: 100%;
   display: flex;
@@ -275,6 +268,8 @@ form button {
 }
 
 footer {
+  position: relative;
+  z-index: 2;
   background-color: gray;
   color: white;
   font-family: "Playfair Display", serif;
@@ -283,6 +278,7 @@ footer {
 }
 
 .top {
+  z-index: 3;
   position: fixed;
   bottom: 20px;
   right: 10px;
@@ -366,6 +362,7 @@ footer {
     width: 50vh;
     padding-top: 50vh;
     margin: 0 calc(100% / 2 - 48vh / 2);
+    z-index: -1;
   }
 
   .hidden h3 {
@@ -425,5 +422,11 @@ footer {
     background-color: white;
     border: 1px var(--blackish) solid;
     color: var(--blackish);
+  }
+
+  form > button:disabled {
+    background-color: gray;
+    color: black;
+    cursor: not-allowed;
   }
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/style.css" />
     <title>Georgios Katsanakis (aka Kronos)</title>
+    <script src="js/index.js" type="module""></script>
   </head>
   <body>
     <header id="home">
@@ -32,7 +33,7 @@
         <h1><q>I love to create and to solve problems</q></h1>
         <div class="circle"></div>
       </section>
-      <a href="#page2" class="next"><img src="/images/next.svg" alt="next page" /></a>
+      <a href="#" class="next"><img src="/images/next.svg" alt="next page" /></a>
 
       <!-- Page 2 -->
       <section class="page" id="page2">
@@ -51,9 +52,6 @@
         </div>
         <div class="circle circle2"></div>
       </section>
-      <a href="#page3" class="next next2">
-        <img src="/images/next.svg" alt="next page" />
-      </a>
 
       <!-- Page 3 -->
       <section class="page" id="page3">
@@ -113,18 +111,15 @@
           </div>
         </div>
       </section>
-      <a href="#page4" class="next next3">
-        <img src="/images/next.svg" alt="next page" />
-      </a>
 
       <!-- Page 4 -->
       <section class="page" id="page4">
         <div>
           <h2>Contact</h2>
           <form>
-            <input type="text" placeholder="Name *" />
-            <input type="email" placeholder="E-mail *" />
-            <textarea placeholder="Message *"></textarea>
+            <input type="text" placeholder="Name *" id="name" />
+            <input type="email" placeholder="E-mail *"  id="email"/>
+            <textarea placeholder="Message *" id="message"></textarea>
             <button type="submit">Send</button>
           </form>
           <div>
@@ -138,7 +133,7 @@
         </div>
         <div class="circle circle4"></div>
       </section>
-      <a href="#page1" class="top"><img src="/images/top.svg" /></a>
+      <a href="#" class="top"><img src="/images/top.svg" /></a>
     </main>
     <footer>
       <p>Copyright © 2021 Georgios Katsanakis</p>
