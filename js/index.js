@@ -14,7 +14,7 @@ const closeJswBtn = document.querySelector(".jsw");
 const closeGhBtn = document.querySelector(".gh");
 const closeCsmBtn = document.querySelector(".csm");
 
-const API_CONTACT = "https://kronos.kandz.me/wp-json/contact-form-7/v1/contact-forms/5/feedback";
+const API_CONTACT = "https://kronos.kandz.me/wp/wp-json/contact-form-7/v1/contact-forms/5/feedback";
 
 button.disabled = true;
 let page=0;
@@ -75,7 +75,7 @@ next.addEventListener("click", (e)=> {
 
 nameEl.addEventListener("blur", () => {
   // check if not empty
-  if (nameEl.value.length<1){
+      if (nameEl.value.length<1){
     showToastMsg("Please enter your name", "name", 0)
     nameReady = false;
   } else {
@@ -97,7 +97,7 @@ emailEl.addEventListener("blur", ()=> {
   checkForm();
 })
 
-messageEl.addEventListener("blur", ()=> {
+messageEl.addEventListener("input", ()=> {
   // check if not empty
   if(messageEl.value.length<1){
     showToastMsg("Please enter a message", "message", 0);
@@ -113,17 +113,22 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let data = new FormData();
-  data.append("your-name", name);
-  data.append("your-email", email);
-  data.append("your-subject", subject);
-  data.append("your-message", msg);
+  data.append("your-name", nameEl.value);
+  data.append("your-email", emailEl.value);
+  data.append("your-subject", "Kronos Portfolio");
+  data.append("your-message", messageEl.value);
   fetch(API_CONTACT, {
     method: "POST",
     body: data,
     redirect: "follow"
   })
   .then (res => res.json())
-  .then (json => console.log(json))
+  .then (json => {
+    showToastMsg(json.message, "contact", 1);
+  })
+  .catch(e => {
+    showToastMsg("Something went wrong.", "contact", 0);
+  })
 
 
 })
