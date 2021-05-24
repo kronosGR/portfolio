@@ -140,6 +140,8 @@ nav ul {
   position: fixed;
   bottom: 7px;
   left: calc(100% / 2 - 50px / 2);
+  background-color: white;
+  border-radius: 50%;
 }
 
 q {
@@ -405,24 +407,26 @@ footer {
   margin-top: 30px;
 }
 
+.next:hover{
+  background-color: var(--yellow);
+  border-radius: 50%;
+}
+
+.top:hover{
+  transform: scale(0.8);
+}
+
+
 
 @media screen and (min-width: 800px) {
   :root {
-    font-size: 17px;
-  }
-
-  .next:hover{
-    background-color: var(--yellow);
-    border-radius: 50%;
+    font-size: 18px;
   }
 
   .next img{
     margin: 0px 0px -3px 0px;
   }
 
-  .top:hover{
-    transform: scale(0.8);
-  }
 
   header label {
     display: none;
@@ -460,7 +464,9 @@ footer {
 
   .projects-container {
     display: flex;
-    margin: 15vh 0;
+    flex-wrap: wrap;
+    margin: 12vh 0;
+    justify-content: center;
   }
 
   .slide > img {
@@ -484,7 +490,7 @@ footer {
   }
 
   .hidden h3 {
-    font-size: 1.2rem;
+    font-size: 1.2rem; 
   }
 
   .hidden p {
@@ -496,6 +502,14 @@ footer {
     left: 10%;
     height: 16%;
     margin: 0;
+  }
+
+  .hidden:hover, .hidden:active {
+    height: 90%;
+    transition: 1s;
+    cursor: pointer;
+    width: 80%;
+    left: 10%;
   }
 
   #page4 h2{
