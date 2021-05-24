@@ -51,6 +51,10 @@ a:hover {
   color: var(--yellow);
 }
 
+sup{
+  color:blue;
+}
+
 header {
   position: fixed;
   width: inherit;
@@ -231,6 +235,7 @@ q::after {
 }
 
 .info{
+  display: inline-block;
   margin: 30px 5px 0px 5px;
 }
 
@@ -313,6 +318,12 @@ footer {
   align-items: center;
 }
 
+.sub--ul {
+  margin-left: 20px;
+}
+
+
+
 .report{
   width: 80%;
   height: 80%;
@@ -358,6 +369,17 @@ footer {
 .report h5 {
   margin-top: 10px;
   text-align: left;
+}
+
+.explanation{
+  margin-top: 20px;
+  color : blue;
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+.report > div{
+  margin-top: 30px;
 }
 
 
@@ -447,7 +469,10 @@ footer {
   }
 
   .hidden {
+    width: 80%;
+    left: 10%;
     height: 16%;
+    margin: 0;
   }
 
   #page4 h2{
