@@ -75,6 +75,10 @@ header {
   font-size: 2rem;
 }
 
+.selected{
+  color: var(--yellow);
+}
+
 header > div {
   display: flex;
   width: 70%;

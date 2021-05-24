@@ -34,25 +34,64 @@ window.addEventListener("resize", ()=> {
   innerHeight = window.innerHeight;
 })
 
+document.addEventListener("scroll", (e)=> {
+  page = Number((window.pageYOffset / innerHeight).toFixed(0))+ 1;
+  updateMenu();
+})
+
 menuHome.addEventListener("click", (e)=>{
   page=1;
+  updateMenu();
 })
 
 menuAbout.addEventListener("click", (e)=>{
   page=2;
+  updateMenu();
 })
 
 menuProjects.addEventListener("click", (e)=>{
   page=3;
+  updateMenu();
 })
 
 menuContact.addEventListener("click", (e)=>{
   page=4;
+  updateMenu();
 })
 
 logo.addEventListener("click", (e)=>{
   page=1;
+  updateMenu();
 })
+
+function updateMenu(){
+  switch(page){
+    case 1:
+      menuHome.classList.add("selected");
+      menuAbout.classList.remove("selected");
+      menuProjects.classList.remove("selected");
+      menuContact.classList.remove("selected");
+      break;
+    case 2:
+      menuHome.classList.remove("selected");
+      menuAbout.classList.add("selected");
+      menuProjects.classList.remove("selected");
+      menuContact.classList.remove("selected");
+      break;
+    case 3:
+      menuHome.classList.remove("selected");
+      menuAbout.classList.remove("selected");
+      menuProjects.classList.add("selected");
+      menuContact.classList.remove("selected");
+      break;    
+    case 4:
+      menuHome.classList.remove("selected");
+      menuAbout.classList.remove("selected");
+      menuProjects.classList.remove("selected");
+      menuContact.classList.add("selected");
+      break;
+  }
+}
 
 jswInfoBtn.addEventListener("click", (e)=>{
   e.preventDefault();
@@ -92,6 +131,7 @@ top.addEventListener("click", (e) => {
     left: 0,
     behavior: 'smooth'
   });
+  updateMenu();
 })
 
 next.addEventListener("click", (e)=> {
@@ -102,6 +142,7 @@ next.addEventListener("click", (e)=> {
     behavior: 'smooth'
   });
   page++;
+  updateMenu();
 })
 
 nameEl.addEventListener("blur", () => {
