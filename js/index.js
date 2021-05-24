@@ -34,11 +34,13 @@ window.addEventListener("resize", ()=> {
   innerHeight = window.innerHeight;
 })
 
+// update the selected in menu while scrolling
 document.addEventListener("scroll", (e)=> {
   page = Number((window.pageYOffset / innerHeight).toFixed(0))+ 1;
   updateMenu();
 })
 
+// update the page according to navigation selection START-->
 menuHome.addEventListener("click", (e)=>{
   page=1;
   updateMenu();
@@ -63,7 +65,9 @@ logo.addEventListener("click", (e)=>{
   page=1;
   updateMenu();
 })
+// <--END update the page according to navigation selection
 
+// updates the menu selection according to page number
 function updateMenu(){
   switch(page){
     case 1:
@@ -93,6 +97,7 @@ function updateMenu(){
   }
 }
 
+// functions toggles the information modal windows START-->
 jswInfoBtn.addEventListener("click", (e)=>{
   e.preventDefault();
   document.querySelector(".jsw-cont").style="display:flex;";
@@ -121,8 +126,9 @@ csmInfoBtn.addEventListener("click", (e)=>{
 closeCsmBtn.addEventListener("click", () => {
   document.querySelector(".csm-cont").style="display:none;";
 })
+// <--END functions toggles the information modal windows
 
-
+// scroll to top page
 top.addEventListener("click", (e) => {
   page=1;
   e.preventDefault();
@@ -134,6 +140,8 @@ top.addEventListener("click", (e) => {
   updateMenu();
 })
 
+
+// scroll to next page
 next.addEventListener("click", (e)=> {
   e.preventDefault();
   window.scroll({
@@ -145,6 +153,7 @@ next.addEventListener("click", (e)=> {
   updateMenu();
 })
 
+// contact form validation START-->
 nameEl.addEventListener("blur", () => {
   // check if not empty
       if (nameEl.value.length<1){
@@ -201,9 +210,9 @@ form.addEventListener("submit", (e) => {
   .catch(e => {
     showToastMsg("Something went wrong.", "contact", 0);
   })
-
-
 })
+// <--END contact form validation
+
 
 /**
  * check if all form fields are valid and toggles the button
