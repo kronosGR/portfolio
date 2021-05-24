@@ -227,11 +227,11 @@ function checkForm(){
 }
 
 function enableNext(){
-  next.style = "display: fixed";
+  next.style = "display: fixed; position:fixed;";
 }
 
 function disableNext(){
-  next.style = "display: none";
+  next.style = "display: none; position:static;";
 }
 
 // email regex
