@@ -13,15 +13,46 @@ const csmInfoBtn = document.querySelector("#csm-info");
 const closeJswBtn = document.querySelector(".jsw");
 const closeGhBtn = document.querySelector(".gh");
 const closeCsmBtn = document.querySelector(".csm");
+const logo = document.querySelector(".logo");
+const menuHome = document.querySelector("#menu-home");
+const menuAbout = document.querySelector("#menu-about");
+const menuProjects = document.querySelector("#menu-projects");
+const menuContact = document.querySelector("#menu-contact");
 
 const API_CONTACT = "https://kronos.kandz.me/wp/wp-json/contact-form-7/v1/contact-forms/5/feedback";
 
 button.disabled = true;
-let page=0;
+let page=1;
 
 let emailReady = false;
 let nameReady = false;
 let messageReady = false;
+
+let innerHeight = window.innerHeight;
+
+window.addEventListener("resize", ()=> {
+  innerHeight = window.innerHeight;
+})
+
+menuHome.addEventListener("click", (e)=>{
+  page=1;
+})
+
+menuAbout.addEventListener("click", (e)=>{
+  page=2;
+})
+
+menuProjects.addEventListener("click", (e)=>{
+  page=3;
+})
+
+menuContact.addEventListener("click", (e)=>{
+  page=4;
+})
+
+logo.addEventListener("click", (e)=>{
+  page=1;
+})
 
 jswInfoBtn.addEventListener("click", (e)=>{
   e.preventDefault();
@@ -54,7 +85,7 @@ closeCsmBtn.addEventListener("click", () => {
 
 
 top.addEventListener("click", (e) => {
-  page=0;
+  page=1;
   e.preventDefault();
   window.scroll({
     top: 0,
@@ -64,13 +95,13 @@ top.addEventListener("click", (e) => {
 })
 
 next.addEventListener("click", (e)=> {
-  page++;
   e.preventDefault();
   window.scroll({
     top: innerHeight * page,
     left: 0,
     behavior: 'smooth'
   });
+  page++;
 })
 
 nameEl.addEventListener("blur", () => {

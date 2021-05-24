@@ -229,6 +229,8 @@ q::after {
   height: 90%;
   transition: 1s;
   cursor: pointer;
+  width: 100%;
+  left: 0%;
 }
 
 .cta {  
@@ -240,7 +242,7 @@ q::after {
 
 .info{
   display: inline-block;
-  margin: 30px 5px 0px 5px;
+  margin: 0 5px 0px 5px;
 }
 
 form {
@@ -273,6 +275,12 @@ form button {
 form button:hover{
   background-color: var(--blackish);
   color: var(--yellow);
+}
+
+form > button:disabled {
+  background-color: gray;
+  color: black;
+  cursor: not-allowed;
 }
 
 #page4 img {
@@ -335,6 +343,7 @@ footer {
 
 
 .report{
+  overflow-y: auto;
   width: 80%;
   height: 80%;
   border: 2px var(--yellow) solid;
@@ -532,9 +541,4 @@ footer {
     color: var(--blackish);
   }
 
-  form > button:disabled {
-    background-color: gray;
-    color: black;
-    cursor: not-allowed;
-  }
 }
