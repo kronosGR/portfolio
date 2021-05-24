@@ -75,24 +75,28 @@ function updateMenu(){
       menuAbout.classList.remove("selected");
       menuProjects.classList.remove("selected");
       menuContact.classList.remove("selected");
+      enableNext();
       break;
     case 2:
       menuHome.classList.remove("selected");
       menuAbout.classList.add("selected");
       menuProjects.classList.remove("selected");
       menuContact.classList.remove("selected");
+      enableNext();
       break;
     case 3:
       menuHome.classList.remove("selected");
       menuAbout.classList.remove("selected");
       menuProjects.classList.add("selected");
       menuContact.classList.remove("selected");
+      enableNext();
       break;    
     case 4:
       menuHome.classList.remove("selected");
       menuAbout.classList.remove("selected");
       menuProjects.classList.remove("selected");
       menuContact.classList.add("selected");
+      disableNext();
       break;
   }
 }
@@ -220,6 +224,14 @@ form.addEventListener("submit", (e) => {
 function checkForm(){
   if (emailReady && messageReady && nameReady) button.disabled = false;
   else button.disabled = true;
+}
+
+function enableNext(){
+  next.style = "display: fixed";
+}
+
+function disableNext(){
+  next.style = "display: none";
 }
 
 // email regex
