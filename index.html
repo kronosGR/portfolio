@@ -108,13 +108,13 @@
                   <p>
                     <h5>Changes:</h5>
                     <ul>
-                      <li>Added dates at tutorials page</li>
+                      <li>Added dates at tutorials page so the user can know if it is a new or an old tutorial</li>
                       <li>Added Sort functionality at tutorials page. The user can sort the posts
-                        by date asc/desc and title asc/desc
+                        by date asc/desc and title asc/desc. It is useful for the user for better browsing the tutorials
                       </li>
                       <li>Added Filter functionality at the tutorials page on the already
                         fetched results. Removes the posts that does not contain the keyword
-                        the user searched
+                        the user searched. Very good for the user to find a tutorial that contains a specific keyword
                       </li>
                     </ul>
                   </p>
@@ -169,10 +169,21 @@
                   <p>
                     <h5>Changes:</h5>
                     <ul>
-                      <li>Fixed readability problems by darkening the background color and increasing the font size</li>
-                      <li>Left aligned the paragraphs to help scalability and each line starts from the same axis</li>
-                      <li>Added JavaScript validation to the contact form</li>
-                      <li>Contact form saves the messages to database through WP API</li>
+                      <li>Fixed readability problems by darkening the background color and increasing the font size. Text was difficult
+                        to read and somehow was creating problem to the eyes after a while.
+                      </li>
+                      <li>Left aligned the paragraphs to help scalability and each line starts from the same axis. This helps the users
+                        eyes following the text.
+                      </li>
+                      <li>Added JavaScript validation to the contact form. This feature was added to give immediately feedback to the user
+                        when he/she enters the information needed. Makes his experience better and avoiding entering information that is
+                          not needed. The feedback is shown at the bottom of the screen like an Android Toast message, and disappears after a while.
+                          It has different background colors from the site, so it will attract the users attention and notice the messages. Red for
+                          error and green for send confirmation.
+                      </li>
+                      <li>Contact form saves the messages to database through WP API. This features is useful for the site administrators/owners
+                        but also for the user to have a way to communicate fast.
+                      </li>
                     </ul>
                   </p>
                   <div>
@@ -233,20 +244,27 @@
                     </ul>
                   </p>
                   <p>
-                    <h5>Changes<sup>*</sup>:</h5>
+                    <h5>Changes:</h5>
                     <ul>
                       <li>System Requirements has a different background color so it looks that it does not belong to
-                        the main section
+                        the main section and confuses the user.
                       </li>
-                      <li>At the contact form the feedback message is more clear</li>
-                      <li>Toggles button state at the contact form according to the form validation with JS</li>
-                      <li>Saves the messages from the contact form to the database</li>
-                      <li>Fixed the error at the HTML that it was showing [object object]</li>
+                      <li>At the contact form changed the user's feedback for better experience. Message with green text
+                         below the "SEND" button and clearing the form.
+                      </li>
+                      <li>Toggles button state at the contact form according to the form validation with JS. This way the user
+                        will not try to press it while there are missing information in the form. The button also changes colors
+                        while disabled for better user feedback.
+                      </li>
+                      <li>Saves the messages from the contact form to the database for faster user communication with the 
+                        site's administrators.
+                      </li>
+                      <li>Fixed the error at the HTML that it was showing [object object]. Not good to have errors while the
+                        website is live.
+                      </li>
                     </ul>
                   </p>
-                  <p class="explanation">
-                    <sup>*</sup> - Many things have been changed the last months, after users and teachers' mostly feedback.
-                  </p>
+                 
                   <div>
                     <a href="https://gamehubkronos.netlify.app/" target="_blank" class="cta">Visit</a>
                     <a href="https://github.com/kronosGR/GameHub" target="_blank" class="cta">Github</a>
